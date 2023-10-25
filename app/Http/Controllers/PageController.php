@@ -26,11 +26,20 @@ class PageController extends Controller
     {
         $view = strtolower('page.'.$page->title);
 
-        if($page->title === 'Shop'){
-            $products = Product::all();
+        $products = $this->addProductsToPage($page,'Shop');
+
+        if(!empty($products)){
             return view($view, compact('page', 'products'));
+        } else {
+            return view($view, compact('page'));
+        }
+    }
+
+    function addProductsToPage(Page $page, string $title) {
+        if($page->title === $title){
+            $products = Product::all();
+            return $products;
         }
 
-        return view($view, compact('page'));
     }
 }
