@@ -20,20 +20,15 @@
                                         <div class="col-lg-8 mx-auto">
         
                                             <div class="testimonial-block text-center">
-                                                {{-- <div class="author-info">
-                                                    <div class="author-pic"> --}}
-                                                        <img src="{{ asset('images/product/' . $prodImage) }}" alt="{{ $product->name }}" alt="Maria Jones" class="img-fluid">
-                                                    {{-- </div>
-        
-                                                </div> --}}
+                                                <img src="{{ asset('images/product/' . $prodImage) }}" alt="{{ $product->name }}" alt="Maria Jones" class="img-fluid">
                                             </div>
         
                                         </div>
                                     </div>
                                 </div> 
                             @endforeach
-                            <!-- END item -->
                         </div>
+                        
                     </div>
                 </div>
             </div>
