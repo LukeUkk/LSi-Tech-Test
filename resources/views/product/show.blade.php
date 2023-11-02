@@ -27,8 +27,8 @@
                                     </div>
                                 </div> 
                             @endforeach
+                            <!-- END item -->
                         </div>
-                        
                     </div>
                 </div>
             </div>

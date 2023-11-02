@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -25,3 +26,5 @@ Route::get('/product/{name}', [ProductController::class, 'show'])
     ->middleware('ensureCorrectSlug');
 
 Route::resource('product', ProductController::class)->only(['index', 'create', 'store']);
+
+Route::post('/generate_email/{emailType}', [EmailController::class, 'generateEmail']);
